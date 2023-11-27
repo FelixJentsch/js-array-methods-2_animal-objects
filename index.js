@@ -151,12 +151,21 @@ const weightOfAllAnimalsInAfrica = animals
 
 console.log(weightOfAllAnimalsInAfrica);
 // Hint: As above, but divided by the number of animals in Africa.
+
 const averageWeightOfAllAnimalsInAfrica =
   animals
     .filter((animal) => animal.continents.includes("Africa"))
     .map((animal) => animal.weight)
     .reduce((sum, weight) => sum + weight) /
   animals.filter((animal) => animal.continents.includes("Africa")).length;
+
+/* const animalsAfrica = animals.filter((animal) =>
+  animal.continents.includes("Africa")
+);
+const averageWeightOfAllAnimalsInAfrica =                                               // my experiment :D
+  animalsAfrica
+    .map((animal) => animal.weight)
+    .reduce((sum, weight) => sum + weight) / animalsAfrica.length; */
 
 console.log(averageWeightOfAllAnimalsInAfrica);
 export {
